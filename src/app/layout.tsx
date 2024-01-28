@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import MaxWidthContainer from "@/components/MaxWidthContainer";
+import DesktopMenu from "@/components/menu/DesktopMenu";
+import { Menu, UserRound } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +20,29 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <header>
+          <MaxWidthContainer className="items-center justify-between p-4">
+            <div>Logo</div>
+
+            <DesktopMenu />
+
+            <div className="flex  gap-2 p-0">
+              <span className="flex h-12 w-12 flex-shrink-0 flex-grow-0 items-center justify-center">
+                <UserRound />
+              </span>
+              <span className="flex h-12 w-12 flex-shrink-0 flex-grow-0 items-center justify-center lg:hidden">
+                <Menu />
+              </span>
+            </div>
+          </MaxWidthContainer>
+          <MaxWidthContainer>
+            <Separator />
+          </MaxWidthContainer>
+        </header>
+
+        {children}
+      </body>
     </html>
   );
 }
