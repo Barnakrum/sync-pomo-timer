@@ -29,7 +29,11 @@ let MAIN_MENU_CATEGORIES: MenuCategory[] = [
 ];
 
 let MAIN_MENU_STANDALONE_ITEMS: MenuItem[] = [
-  { title: "Quick Timer", href: "/time/quick", icon: <AlarmClockPlus /> },
+  {
+    title: "Quick Timer",
+    href: "/time/quick",
+    icon: <AlarmClockPlus />,
+  },
 ];
 
 export { MAIN_MENU_CATEGORIES, MAIN_MENU_STANDALONE_ITEMS };
