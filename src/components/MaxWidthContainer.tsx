@@ -11,7 +11,7 @@ const MaxWidthContainer = ({
   return (
     <div
       className={cn(
-        "mx-auto flex w-full sm:max-w-[90%] md:max-w-[85%] xl:max-w-[80%]",
+        "mx-auto flex w-full lg:max-w-[85%] xl:max-w-[80%]",
         className,
       )}
     >
