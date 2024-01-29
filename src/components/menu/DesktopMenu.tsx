@@ -21,7 +21,7 @@ import { AlarmClockPlus } from "lucide-react";
 
 const DesktopMenu = () => {
   return (
-    <NavigationMenu className="invisible lg:visible">
+    <NavigationMenu className="hidden lg:block">
       {MAIN_MENU_CATEGORIES.map((category) => (
         <NavigationMenuList key={category.title}>
           <NavigationMenuItem>
@@ -33,7 +33,7 @@ const DesktopMenu = () => {
               </div>
             </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid gap-2 p-2 sm:w-60">
+              <ul className="grid gap-2 p-2 sm:w-72">
                 {category.items.map((item) => (
                   <Link href={item.href} key={item.title}>
                     <li className="block rounded-md hover:bg-accent">
